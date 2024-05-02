@@ -16,8 +16,12 @@ body {
 }
 
 .header__logo {
-  height: 45px;
+  height: 50px;
   margin-left: 15px;
+}
+
+#check {
+  display: none;
 }
 
 .header__menu-label {
@@ -25,11 +29,11 @@ body {
 }
 
 .header__menu-img {
-  height: 40px;
-  margin-right: 18px;
+  height: 50px;
+  margin-right: 15px;
 }
 
-.header__menu-lista {
+.header__menu-ul {
   position: fixed;
   width: 100%;
   height: 0vh;
@@ -41,43 +45,30 @@ body {
   padding: 0;
 }
 
-.header__menu-lista li {
-  list-style: none;
+.header__menu-ul .header__menu-li {
   display: none;
+  list-style: none;
   margin: 50px 0;
   transition: all 0.5s;
 }
 
-.header__menu-lista li a {
-  color: #fafafa;
-}
-
-#check {
-  display: none;
-}
-
-#check:checked ~ .header__menu-lista {
+#check:checked ~ .header__menu-ul {
   height: 100vh;
 }
 
-#check:checked ~ .header__menu-lista li {
+#check:checked ~ .header__menu-ul .header__menu-li {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
 .header__option {
-  color: #000000;
+  color: #fafafa;
   text-decoration: none;
   font-size: 25px;
   font-weight: 500;
-  transition: all 0.5s ease-out;
 }
 
 .header__option:first-child {
   color: #1abc9c;
-}
-
-.header__option:hover {
-  opacity: 50%;
 }
